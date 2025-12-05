@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      EUCC-NG
+    </title>
+    <!--CSS below................-->
+    <link rel="stylesheet" href="EUCC-NG.css">
+  </head>
+  <body>
+<!-- HTML below.............-->
+<div class="general-div">
+
+
+  <div class="header-div">
+<p><span class="eucc">EUCC-NG</span>   <span class="eucc-notabbrev"> --Electricity Usage Cost Calculator-Nigeria.</span></p>
+<button class="contactus-button"onclick="goSite('http://www.ozaaga.com/')" >Contact Us</button>
+</div>
+
+
+<div class="advertisementL-div">
+  <div class="advertL-div1">
+    <img src="EUCC-NG-IMAGES/advert1-Cathelea Suites.jpg" class="advert1-Cathelea">
+     <img src="EUCC-NG-IMAGES/advert1-Cathelea Suites2.jpg" class="advert1-Cathelea2">
+    <button class="advertL-button1" onclick="goSite('https://cathelea.com/')" ><p class="rank-text">G.R.A, Benin City, Edo-State. RANKED BEST IN CLASS!! </p class="clickhere-text">CLICK HERE, to book with us today</p></button>
+  </div>
+  <div class="advertL-div2">
+    <button class="advertL-button2">Place Advert Here</button>  
+  </div>
+  <div class="advertL-div3">
+    <button class="advertL-button3">Place Advert Here</button>
+  </div>
+  <div class="advertL-div4">
+    <button class="advertL-button4">Place Advert Here</button>
+  </div>
+  
+  
+  
+  
+</div>
+
+<div class="advertisementR-div">
+  <div class="advertR-div1"> 
+    <button class="advertR-button1">Place Advert Here</button>
+  </div>
+  <div class="advertR-div2">
+    <button class="advertR-button2">Place Advert Here</button>
+  </div>
+  <div class="advertR-div3">
+    <button class="advertR-button3">Place Advert Here</button>
+  </div>
+  <div class="advertR-div4">
+    <button class="advertR-button4">Place Advert Here</button>
+  </div>
+  
+ 
+</div>
+
+
+
+<div class="content-div">
+
+<div class="bothinputs-div">
+
+<div class="previousinput-div">
+  <div class="meterImage1-div">
+      <img class="meterImage1"; src="EUCC-NG-IMAGES/PostpaidMeter.jpg">
+      <input placeholder=" Enter Previous Reading"; class="js-PrevMeterInput">
+  </div>
+</div>
+
+
+
+<p></p>
+
+<div class="currentinput-div">
+  <div class="meterImage2-div">
+      <img class="meterImage2" src="EUCC-NG-IMAGES/PostpaidMeter.jpg">
+      <input placeholder="Enter Current Reading" class="js-CurrMeterInput">
+  </div>
+</div>
+
+
+
+</div>
+
+
+<p></p>
+
+<div class="dcRate-div">
+<!--<label Class="BEDC-Rate-Label">e.g.BEDC Rate:209.5</label>-->
+<input placeholder="enter rate e.g. 209.5"; class="js-BEDCInput">
+</div>
+
+<p></p>
+
+<div class="vat-div">
+    <!--<label Class="VAT">e.g. VAT:0.075</label>-->
+    <input placeholder=" enter VAT e.g. 0.075"; class="js-VATInput">
+</div>
+
+<p></p>
+
+<div class="calculate-div">
+<button class="Calculate-Button"; onclick="electricBill();">CALCULATE</button>
+</div>
+
+<div class="costoutput-div">
+<p class="js-cost"></p>
+</div>
+
+
+
+<div class="distributionInstruction-div">
+  <p> For information and current rates, click the distribution company for your state below:</p>
+</div>
+
+<div class="distributions-div">  
+<button class="AEDC-button" onclick="goSite('https://www.abujaelectricity.com/')">AEDC</button>
+<button class="BEDC-button" onclick="goSite('https://beninelectric.com/')">BEDC</button>
+<button class="EEDC-button" onclick="goSite('https://www.enugudisco.com/')">EEDC</button>
+<button class="EKEDC-button" onclick="goSite('https://ekedp.com/')">EKEDC</button>
+<button class="IBEDC-button" onclick="goSite('http://www.ibedc-ng.com/')">IBEDC</button>
+<button class="IKEDC-button" onclick="goSite('https://www.ikejaelectric.com/')">IKEDC</button>
+<button class="JEDPLC-button" onclick="goSite('https://www.jedplc.com/')">JEDPLC</button>
+<button class="KAEDCO-button" onclick="goSite('https://kadunaelectric.com/')">KAEDCO</button>
+<button class="KEDCO-button" onclick="goSite('https://kedco.ng/')">KEDCO</button>
+<button class="PHEDC-button" onclick="goSite('https://www.phed.com.ng/')">PHEDC</button>
+<button class="YEDC-button" onclick="goSite('https://www.yedc.com.ng/')">YEDC</button>
+
+</div>
+
+</div>
+
+
+<div class="footer-div">
+  <p> &copy;2025 <span class="ozaagabizltd" onclick="goSite('http://www.ozaaga.com/')"> Ozaaga Biz Ltd.</span> All rights reserved.</p>
+</div>
+
+</div>
+
+
+<!--Javascript below................-->
+    <script>
+
+function goSite(url) {
+    window.open(url, "_blank");  // opens in new tab
+}
+
+
+
+     // Note per instructor: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes. 
+
+  
+function electricBill() {
+  
+const inputElementa = document.querySelector('.js-PrevMeterInput');
+  let a= Number(inputElementa.value)*100;
+
+const inputElementb = document.querySelector('.js-CurrMeterInput');
+  let b= Number(inputElementb.value)*100;
+
+const inputElementc = document.querySelector('.js-BEDCInput');
+  let c= Number(inputElementc.value);
+
+const inputElementd = document.querySelector('.js-VATInput');
+  let d= Number(inputElementd.value);
+
+ 
+      let usage= eval(b-a)
+      let result= eval(((b-a)*c)+((b-a)*c*d));
+      let bill= Math.round(result);
+      
+
+     // console.log ((usage)+`kwh`);
+     // console.log(`N`+bill); 
+     
+    // alert(`You used: ${usage} kwh, your electricity bill is N${bill}`);
+
+     document.querySelector('.js-cost').innerHTML=`You used: ${usage/100} kwh, your electricity bill is ₦${(bill/100).toLocaleString()}`;
+
+      ;}
+
+
+
+    </script>
+  </body>
+</html>
