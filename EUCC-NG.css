@@ -1,10 +1,10 @@
-body { position:relative;
+body { position:relative; 
    background-color:gray; padding-top: 100px;
 }
 
 .general-div{color: aquamarine; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; top: 60px;}
 
- .header-div{background-color:rgb(68, 148, 68); color:whitesmoke; height:60px; position:fixed; top:0px;left:0px; right:0px;display:flex;align-items:center;padding-left: 20px; justify-content: space-between;}
+ .header-div{background-color:rgb(68, 148, 68); color:whitesmoke; height:60px; position:fixed; top:0px;left:0px; right:0px;display:flex;align-items:center;flex-shrink:0; padding-left: 20px; justify-content: space-between;z-index: 60;}
  .eucc{color: whitesmoke; font-style: normal; font-size:28px;font-weight: 800;}
  .eucc-notabbrev{color: whitesmoke; font-style:normal; font-size:20px; font-weight: 800;}
 
@@ -13,24 +13,24 @@ body { position:relative;
  .contactus-button:active{color:whitesmoke;}
 
 
- .footer-div{background-color:azure ; color:black; height:50px; position:fixed; bottom:0px; left:0px; right:0px;display:flex; justify-content: center;align-items: center;}
+ .footer-div{background-color:azure ; color:black; height:50px; position:fixed; bottom:0px; left:0px; right:0px;display:flex; justify-content: center;align-items: center;flex-shrink:0}
 
 .content-div{background-color:gray;;right:0px;left:0px;top:60px;bottom: 50px;}
 
-.bothinputs-div{display:flex; justify-content: center; height: 400px;}
+.bothinputs-div{display:flex; justify-content: center; height: 400px;flex-shrink:0}
   .previousinput-div{background-color:gray;;height:330px; width:400px;position:relative;}
   .currentinput-div{background-color:gray;;height:330px; width:400px; position:relative;}
 
-  .meterImage1-div,.meterImage2-div{ z-index:0;height:330px; width:400px;display:flex; justify-content: center;color: burlywood;position: relative;} 
-  .meterImage1,.meterImage2{object-fit:cover; }
+  .meterImage1-div,.meterImage2-div{ z-index:0;height:300px; width:350px;display:flex; justify-content: center;color: burlywood;position: relative;flex-shrink:0;flex-wrap: wrap; } 
+  .meterImage1,.meterImage2{object-fit:cover; max-width:100%;}
   
-  .dcRate-div{background-color:gray;display:flex; justify-content: center;height: 30px; width:150;}
+  .dcRate-div{background-color:gray;display:flex;flex-shrink:0; justify-content: center;height: 30px; width:150;}
   .vat-div{background-color:gray;display:flex; justify-content: center;height: 30px; width:150 ; }
 
   .js-VATInput,.js-BEDCInput{border-radius:5px ;border: none;}
   .js-VATInput::placeholder,.js-BEDCInput::placeholder{padding-left:10px}
   
-  .calculate-div{background-color:gray;;display:flex; justify-content: center;}
+  .calculate-div{background-color:gray;;display:flex; justify-content: center;flex-shrink:0;}
     .Calculate-Button{cursor: pointer; background-color: rgb(68, 148, 68); box-shadow:(0,0,0,0.06);border-radius:5px;border-color: aquamarine; height:40px;width:140px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; font-weight: 800;}
 
     .Calculate-Button:hover{color:aquamarine}
@@ -39,15 +39,15 @@ body { position:relative;
   .costoutput-div{background-color:gray;;display:flex; justify-content: center;font-size:28px ;color:  #00ff0a;;}
 
 
-.bothinputs-div{background-color:gray;display: flex;flex-direction: row;}
+.bothinputs-div{background-color:gray;display: flex;flex-direction: row;flex-shrink:0;}
    .js-CurrMeterInput,.js-PrevMeterInput{font-family: 'Digital-7', sans-serif;font-size: 12px;letter-spacing: 2px;color: #00ff0a; /* old TI green glow */
-    background-color: #1a1a1a;width:180px;height: 35px; border-radius:5px;display:flex; justify-content: center;position: absolute;margin-top: 38px; box-shadow:-0.30,-0.30,-0.30,0 ;}
+    background-color: #1a1a1a;width:180px;height: 35px; border-radius:5px;display:flex; justify-content: center;position: absolute;margin-top: 38px; box-shadow:inset -0.30,-0.30,-0.30,0 ;}
     .js-CurrMeterInput::placeholder{padding-left:10px;}
 
 
  .distributionInstruction-div{background-color:gray;;display:flex; justify-content: center;}  
 
-.distributions-div{background-color:gray; display:flex; justify-content: center;}
+.distributions-div{background-color:gray; display:flex; justify-content: center;flex-shrink:0;}
   .AEDC-button,.BEDC-button,.EKEDC-button,.EEDC-button,.IBEDC-button,.IKEDC-button,.JEDPLC-button,.KAEDCO-button,.KEDCO-button,.PHEDC-button,
   .YEDC-button {cursor: pointer; background-color: rgb(132, 190, 132); box-shadow:(0,0,0,0.15);border-radius:5px; height:40px;width:80px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color:rgb(50, 119, 50);font-weight: 800; border-color: rgb(68, 148, 68);}
 
@@ -59,19 +59,19 @@ body { position:relative;
 .AEDC-button:active,.BEDC-button:active,.EKEDC-button:active,.EEDC-button:active,.IBEDC-button:active,.IKEDC-button:active,.JEDPLC-button:active,.KAEDCO-button:active,.KEDCO-button:active,.PHEDC-button:active,.YEDC-button:active{color: white; background-color: rgb(50, 119, 50);}
   
 
-   .advertisementL-div{background-color:gray;left:0px;top:60px;bottom: 50px; width:250px;display: block;position:absolute;}
-  .advertL-button1,.advertL-button2,.advertL-button3,.advertL-button4{width:250px;height: 208px;color: brown;border-radius: 5px;border-color:gray;}
+   .advertisementL-div{background-color:gray;left:0px;top:60px;bottom: 50px; width:250px;position:absolute;max-width: 100%;}
+  .advertL-button1,.advertL-button2,.advertL-button3,.advertL-button4{width:250px;height: 208px;color: brown;border-radius: 5px;border-color:gray;max-width: 100%;}
 
 
-.advertisementR-div{background-color:gray;right:0px;top:60px;bottom: 50px;width:250px;display:block;position: absolute;}
-  .advertR-button1,.advertR-button2,.advertR-button3,.advertR-button4{width:250px;height: 208px;color: brown;border-radius: 5px; border-color:gray;}
+.advertisementR-div{background-color:gray;right:0px;top:60px;bottom: 50px;width:250px;position: absolute;max-width: 100%;}
+  .advertR-button1,.advertR-button2,.advertR-button3,.advertR-button4{width:250px;height: 208px;color: brown;border-radius: 5px; border-color:gray;max-width: 100%;}
 
 
   .advertR-button1:hover,.advertR-button2:hover,.advertR-button3:hover,.advertR-button4:hover,.advertL-button1:hover,.advertL-button2:hover,.advertL-button3:hover,.advertL-button4:hover{cursor:pointer;background-color: rgb(132, 190, 132);color: white; transition: 0.5;}
 
   .ozaagabizltd:hover{color:rgb(50, 119, 50); cursor:pointer;}
 
-  .advertL-div1{display: flex;}
+  .advertL-div1{display: flex;flex-shrink:0;}
     .advertL-button1{ position:relative;margin:0; padding: 0; background-color:whitesmoke;color:rgb(50, 119, 50)}
       .advert1-Cathelea{ position:absolute; object-fit: contain; z-index: 1;width:250px;height: 40px;top: 10px;}
       .advert1-Cathelea2{ position:absolute; object-fit: contain; z-index: 1; width:250px; height: 90px;top: 50px;}
